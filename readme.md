@@ -1,4 +1,4 @@
-# makemy
+![makemy](/media/makemy.png)
 
 makemy simplifies the process of writing, creating and publishing posts/documents on static websites without the need of a back-end server.
 
