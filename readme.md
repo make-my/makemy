@@ -4,6 +4,10 @@ makemy simplifies the process of writing, creating and publishing posts/document
 
 By passing in a html template and a text document with a syntax that makemy understands, will it automatically create an index.html file. The way the template works, is that you can create a normal html site and just insert a `<POST>` tag where you want the post to be inserted. The file will be put into a parent folder with the name of the post, which will again be inserted into a generic "posts"-folder. This structure design is created to fit GitHub pages.
 
+### Extra reading material: [SYNTAX-DOCUMENT.md](https://github.com/MathiasWP/Easy-Posting/blob/master/SYNTAX-DOCUMENT.md)
+
+&nbsp;
+
 # How to use:
 
 ## Install 
@@ -66,8 +70,39 @@ Now your root folder will have a folder named "posts" where the posts will be in
 
 &nbsp;
 
-## Extra reading material: [SYNTAX-DOCUMENT.md](https://github.com/MathiasWP/Easy-Posting/blob/master/SYNTAX-DOCUMENT.md)
+# API
 
+### makemy.page(path-to-directory, [options])
+
+`options`:
+
+#### REQUIRED OPTIONS:
+ - template: name of the HTML file used as the template for the page.
+ - sourcefolder: name of folder where the written post is.
+ - postname: name of post.
+
+#### VOLUNTARY OPTIONS:
+- location: path (relative to `__dirname`) to where the "posts"-folder should be created.
+- extension: type of extension used on the written document.
+- update: choosing if a post should be updated (generated again), is false by default
+
+#### Example:
+
+```js
+const options = {
+  template: 'template',
+  sourcefolder: 'posts-src',
+  postname: 'i-like-pancakes',
+   extension: 'txt',
+  update: true
+};
+
+makemy.page(__dirname, options);
+```
+
+&nbsp;
+
+&nbsp;
 
 #### If you have any questions or just want to chat, then send me an 📧 at mathiaswpicker@gmail.com
 
