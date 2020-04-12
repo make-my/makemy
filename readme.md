@@ -14,7 +14,7 @@ By passing in a html template and a text document with a syntax that makemy unde
 
 ## Install 
 
-`npm install easy-posting`
+`npm install makemy`
 
 &nbsp;
 
