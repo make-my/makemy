@@ -1,0 +1,14 @@
+{
+  "name": "makemy",
+  "version": "1.0.0",
+  "description": "makemy simplifies the process of writing, creating and publishing posts/documents on static websites without the need of a back-end server.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "Mathias Picker",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "chalk": "^4.0.0"
+  }
+}

@@ -1,0 +1,131 @@
+/* Styling for the post-section wrapper */
+.post-section {
+  width: 100%;
+  min-height: 50rem;
+  margin-bottom: 4rem;
+  font-size: 2.5rem;
+  --black: rgb(37, 37, 37);
+  --white: white;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+/* Setting post-section to dark mode - maybe make this optional? */
+@media (prefers-color-scheme: dark) {
+  .post-section {
+    --black: white;
+    --white: rgb(37, 37, 37);
+  }
+}
+
+/* Every section in post set to same width and with some spacing between */
+.post-section > * {
+  width: 60%;
+  margin: 4rem auto 0;
+  color: inherit;
+  background-color: inherit;
+  line-height: 1.2;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.created-at {
+  position: relative;
+  display: block;
+  width: 60%;
+  margin: 2.5rem auto -2rem;
+  opacity: 0.7;
+  font-size: 1.15em;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .post-section {
+    font-size: 2.2rem;
+  }
+
+  .post-section > * {
+    width: 80%;
+  }
+}
+
+/* Every paragraph should also have some additional space */
+.post-section .text-section > p {
+  margin: 1.8rem auto;
+}
+
+/* Styling for links */
+.post-section a {
+  color: rgb(25, 125, 192);
+  border-bottom: 2px solid rgba(25, 125, 192, 0.5);
+  text-decoration: none;
+  padding: 0 0.2rem;
+}
+.post-section a:hover {
+  background-color: rgba(25, 125, 192, 0.1);
+  border-bottom: 2px solid currentColor;
+}
+
+/* HEADERS */
+
+.post-section .title {
+  margin-top: 5rem;
+}
+
+.post-section h1 {
+  font-size: 2.6em;
+  text-decoration: underline;
+}
+
+.post-section h2 {
+  font-size: 2em;
+}
+
+.post-section h3 {
+  font-size: 1.4em;
+}
+
+.post-section h4 {
+  font-size: 1.2em;
+}
+
+.post-section h5 {
+  font-size: 1.05em;
+}
+
+.post-section h6 {
+  font-size: 0.9em;
+}
+
+/* QUOTE BLOCKS */
+
+.big-quote {
+  display: block;
+  font-style: italic;
+  padding: 2.5rem;
+  background-color: #fff0d354;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.big-quote .quotee {
+  text-align: right;
+  font-weight: normal;
+  margin: 3rem 3rem 0;
+}
+
+/* HTML ITEMS */
+
+.code-tag,
+.code-tag-flow {
+  background-color: #282c34;
+  color: white;
+}
+.code-tag {
+  display: block;
+  padding: 1.5rem;
+  margin: 1rem auto;
+}
+.code-tag-flow {
+  display: inline;
+  padding: 0.85rem;
+}

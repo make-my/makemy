@@ -1,0 +1,79 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+nav {
+  height: 10rem;
+  background-color: aliceblue;
+  width: 100%;
+  position: relative;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  margin: 10rem 0;
+}
+
+.preview-wrapper {
+  font-size: 2rem;
+  min-height: 10rem;
+  margin: 5rem auto;
+  padding: 2rem;
+  position: relative;
+  cursor: pointer;
+  max-width: 80rem;
+  box-shadow: 1px 1px 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+.preview-wrapper:hover .preview-title {
+  text-decoration: underline;
+}
+
+.preview-wrapper:hover .preview-date {
+  opacity: 1;
+}
+
+.preview-wrapper .preview-title {
+  font-size: 2em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.preview-wrapper .preview-introduction {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.preview-wrapper .preview-date {
+  position: absolute;
+  bottom: 2rem;
+  opacity: 0.6;
+}
+
+footer {
+  height: 10rem;
+  background-color: beige;
+  width: 100%;
+  position: relative;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

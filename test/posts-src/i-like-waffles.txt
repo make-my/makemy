@@ -1,0 +1,59 @@
+--name This is the first blog post i have created
+--introduction You know how this post was created automatically? It's quite cool
+
+# Title - 1
+
+This is the title of post
+
+# Text
+
+Here i could write some text about something I care about.
+<a href="/test/posts/i-like-pancakes/">Click here!!</a>
+Above me is a link that you can click on, and this link works also <a href="/test/posts/i-like-pancakes/">Click for a list</a>.
+
+
+You can also write seperate paragraphs within a section. To do this, simply add 2 empty lines where you want the gap to be created (done right above this line)
+
+#Title-3
+
+Here is some code
+
+# Code
+
+function sayHello() {
+    return 'Hello';
+}
+
+
+# Title
+
+New title again, should be h2
+
+
+# Quote
+
+“Two things are infinite: the universe and human stupidity; 
+and I'm not sure about the universe.”
+
+--- Albert Einstein
+
+
+# Title - 6
+
+This is another title of my blog-post
+
+# Text
+
+Here i could write some text about something I care about.
+<a href="/posts/first-post/index.html">Click here!!</a>
+Above me is a link that you can click on, and this link works also <a href="list.html">Click for a list</a>.
+
+You can also write seperate paragraphs within a section. The program will automatically create a gap for you in the html and css (at the same place you have done in your blog document).
+
+
+# Quote
+
+“Two things are infinite: the universe and human stupidity; 
+and I'm not sure about the universe.”
+
+--- Albert Einstein
