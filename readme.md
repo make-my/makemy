@@ -152,7 +152,7 @@ const options = {
   order: 'descending'
 };
 
-makemy.page(__dirname, options);
+makemy.json(__dirname, options);
 ```
 
 &nbsp;
@@ -174,7 +174,7 @@ const options = {
   posts: 'all'
 };
 
-makemy.page(__dirname, options);
+makemy.template(__dirname, options);
 ```
 
 &nbsp;
