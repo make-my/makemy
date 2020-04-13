@@ -1,10 +1,12 @@
-![makemy](/media/makemy.png)
+<p align="center">
+<img src="/media/makemy.png" alt="makemy">
+</p>
 
 makemy simplifies the process of writing, creating and publishing posts/documents on static websites without the need of a back-end server.
 
 By passing in a html template and a text document with a syntax that makemy understands, will it automatically create an index.html file. The way the template works, is that you can create a normal html site and just insert a `<POST>` tag where you want the post to be inserted. The file will be put into a parent folder with the name of the post, which will again be inserted into a generic "posts"-folder. This structure design is created to fit GitHub pages.
 
-### Extra reading material: [SYNTAX-DOCUMENT.md](https://github.com/MathiasWP/Easy-Posting/blob/master/SYNTAX-DOCUMENT.md)
+### Extra reading material: [SYNTAX-DOCUMENT.md](/SYNTAX-DOCUMENT.md)
 
 ## Features
 
@@ -24,7 +26,7 @@ By passing in a html template and a text document with a syntax that makemy unde
 
 ## Install
 
-`npm install easy-posting`
+`npm install makemy`
 
 &nbsp;
 
