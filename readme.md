@@ -11,26 +11,45 @@ By passing in a html template and a text document with a syntax that makemy unde
 ## Features
 
 - Simple and logic API
-- Efficient/fast tool
-- Automatically generated JSON for fetching all posts on client-side
+- Efficient tool
+- Helpful command-feedback
+- Automatically generated JSON for fetching previews of your posts on the client
 - Ability to update content of already generated pages
 - Ability to update templates for already generated pages
 - Ability to update/alter JSON file
 - Pre-styled and responsive with CSS, but easily allows for own styling
 - Works perfectly with GitHub pages
-- Straightforward to write posts (combination of Markup, HTML and normal text-writing) - requires no re-learning of syntax!
+- Straightforward to write posts (combination of Markup, HTML and normal text-writing)
+### No need to "re-learn" any syntax!
 
 &nbsp;
 
 # How to use:
 
-## Install
+## 1️⃣ Install
 
-`npm install makemy`
+### `npm install makemy`
 
 &nbsp;
 
-## Import the tool and run makemy
+## 2️⃣ Create your post and template in the project
+
+```
+--root
+   |
+   |
+   |---- folder-with-posts
+   |            |
+   |            |--- my-first-post.txt
+   |
+   |
+   |---- template.html
+
+```
+
+&nbsp;
+
+## 3️⃣ Import the tool and run makemy
 
 ```js
 const makemy = require('makemy');
