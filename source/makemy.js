@@ -12,7 +12,8 @@
 
 const makemy = {
   page: require('./tools/createPage/createPage'),
-  json: require('./tools/updateJson/updateJson')
+  json: require('./tools/updateJson/updateJson'),
+  templates: require('./tools/updateTemplates/updateTemplates')
 };
 
 module.exports = makemy;

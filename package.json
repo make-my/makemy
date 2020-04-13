@@ -4,11 +4,15 @@
   "description": "makemy simplifies the process of writing, creating and publishing posts/documents on static websites without the need of a back-end server.",
   "main": "app.js",
   "scripts": {
-    "test": "node ./test/main.js"
+    "test:json": "node ./test/json.js",
+    "test:page": "node ./test/page.js",
+    "test:template": "node ./test/template.js"
   },
   "author": "Mathias Picker",
   "license": "Apache-2.0",
   "dependencies": {
-    "chalk": "^4.0.0"
+    "chalk": "^4.0.0",
+    "cli-progress": "^3.7.0",
+    "jsdom": "^16.2.2"
   }
 }

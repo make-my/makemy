@@ -11,9 +11,14 @@ const MESSAGES = {
   initOptions: {
     template: error('Please add the template for the page.'),
     sourcefolder: error(
-      'Please add the source folder where your text-file is located.'
+      'Please add the source folder where your document is located.'
     ),
-    postname: error('Please add the name of text-file to create a page for.')
+    postname: error('Please add the name of the post.'),
+    wrongOption: variable => {
+      return error(
+        `ERROR: The option ${variable.option} is not supported. Please insert a valid option.`
+      );
+    }
   },
   // Messages about the existence of items
   existence: {
@@ -113,7 +118,33 @@ const MESSAGES = {
     },
     complete: variable => {
       return success(`The post has been ${variable.version}`);
+    },
+    updated: variable => {
+      return [
+        success(
+          "The allPosts.json has succesfully been updated and now contains all the posts from the 'posts'-folder. 🎉"
+        ),
+        success(`The order is ${variable.newOrder}`)
+      ];
+    },
+    reset: info('The allPosts.json file has been reset.'),
+    wrongOrder: variable => {
+      return [
+        warning(
+          `Warning: Order must be either ascending or descending. You wrote "${variable.order}"`
+        ),
+        info(
+          'The allPosts.json file will still be generated with default option (ascending).'
+        )
+      ];
     }
+  },
+  // Messages for template
+  template: {
+    start: info('Starting the template-updates'),
+    success: success(
+      'The posts have succesfully gotten a template makeover! 🎉'
+    )
   },
   // Generic messages/no category
   generic: {

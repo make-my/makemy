@@ -43,6 +43,7 @@ const validateCoreInfo = require('../../utils/validators/validateCoreInfo');
 const validatePostsFolder = require('../../utils/validators/validatePostsFolder');
 const validateFolderForThisPost = require('../../utils/validators/validateFolderForThisPost');
 const configureClientFiles = require('../../utils/setters/configureClientFiles');
+const validateJson = require('../../utils/validators/validateJson');
 const addToJson = require('../../dist/addToJson');
 
 /* Step four */
@@ -92,8 +93,7 @@ async function createPage(directory, options) {
 
   // Checking if the input sent from user is fine.
   try {
-    checkOptions(template, sourcefolder, postname);
-
+    await checkOptions(options, 'createPage');
     await validateTemplate(directory, template);
     await validateSourceFolder(directory, sourcefolder);
     await validateLocationFolder(directory, location);
@@ -151,6 +151,7 @@ async function createPage(directory, options) {
   try {
     await validatePostsFolder(publicPostsFolder);
     await configureClientFiles(publicPostsFolder);
+    await validateJson(publicPostsFolder, false);
     await addToJson(publicPostsFolder, postCoreInfo, update);
     await validateFolderForThisPost(thisPost);
   } catch (error) {

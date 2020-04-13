@@ -6,17 +6,29 @@ By passing in a html template and a text document with a syntax that makemy unde
 
 ### Extra reading material: [SYNTAX-DOCUMENT.md](https://github.com/MathiasWP/Easy-Posting/blob/master/SYNTAX-DOCUMENT.md)
 
+## Features
+
+- Simple and logic API
+- Efficient/fast tool
+- Automatically generated JSON for fetching all posts on client-side
+- Ability to update content of already generated pages
+- Ability to update templates for already generated pages
+- Ability to update/alter JSON file
+- Pre-styled and responsive with CSS, but easily allows for own styling
+- Works perfectly with GitHub pages
+- Straightforward to write posts (combination of Markup, HTML and normal text-writing) - requires no re-learning of syntax!
+
 &nbsp;
 
 # How to use:
 
-## Install 
+## Install
 
 `npm install easy-posting`
 
 &nbsp;
 
-## Import the tool and run makemy 
+## Import the tool and run makemy
 
 ```js
 const makemy = require('makemy');
@@ -77,11 +89,13 @@ Now your root folder will have a folder named "posts" where the posts will be in
 `options`:
 
 #### REQUIRED OPTIONS:
- - template: name of the HTML file used as the template for the page.
- - sourcefolder: name of folder where the written post is.
- - postname: name of post.
+
+- template: name of the HTML file used as the template for the page.
+- sourcefolder: name of folder where the written post is.
+- postname: name of post.
 
 #### VOLUNTARY OPTIONS:
+
 - location: path (relative to `__dirname`) to where the "posts"-folder should be created.
 - extension: type of extension used on the written document.
 - update: choosing if a post should be updated (generated again), is false by default
@@ -93,8 +107,50 @@ const options = {
   template: 'template',
   sourcefolder: 'posts-src',
   postname: 'i-like-pancakes',
-   extension: 'txt',
+  extension: 'txt',
   update: true
+};
+
+makemy.page(__dirname, options);
+```
+
+&nbsp;
+
+### makemy.json(path-to-directory, [options])
+
+`options`:
+
+#### VOLUNTARY OPTIONS:
+
+- order: what order the posts in the json file should be. Options are ascending (default) and descending.
+
+#### Example:
+
+```js
+const options = {
+  order: 'descending'
+};
+
+makemy.page(__dirname, options);
+```
+
+&nbsp;
+
+### makemy.templates(path-to-directory, [options])
+
+`options`:
+
+#### REQUIRED OPTIONS:
+
+- template: name of the new HTML file to use as a template
+- posts: the posts that should have their tempalte updated. Can either be an array with names or just the string 'all'
+
+#### Example:
+
+```js
+const options = {
+  template: 'summer-template',
+  posts: 'all'
 };
 
 makemy.page(__dirname, options);

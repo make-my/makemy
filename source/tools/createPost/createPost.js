@@ -63,7 +63,6 @@ const MODES = new Proxy(modes, {
      * If we update the Proxy-object in our code, its value doesn't actually get updated
      * until we do it here in this caller function.
      */
-
     if (sectionContent.length !== 0) {
       inMode = false;
 

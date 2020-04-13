@@ -16,7 +16,6 @@ async function validateTemplate(directory, template) {
     if (fs.existsSync(path.join(directory, template + '.html'))) {
       return true;
     } else {
-      console.log(template);
       alertUser('existence', 'template', { template }, true);
       throw Error();
     }

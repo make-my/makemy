@@ -13,7 +13,7 @@ async function validatePostsFolder(folder) {
   try {
     if (!fs.existsSync(folder)) {
       fs.mkdirSync(folder);
-      alertUser('creation', 'postFolder');
+      alertUser('creation', 'postsFolder');
     }
   } catch (err) {
     throw new Error(err);

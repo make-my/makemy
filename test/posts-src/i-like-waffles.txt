@@ -1,4 +1,4 @@
---name This is the first blog post i have created
+--name This is the last blog post i have created
 --introduction You know how this post was created automatically? It's quite cool
 
 # Title - 1

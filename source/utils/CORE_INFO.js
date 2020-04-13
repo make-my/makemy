@@ -5,6 +5,7 @@
  */
 
 const CORE_INFO = {
+  //url
   name: '',
   introduction: '',
   creationDate: '',

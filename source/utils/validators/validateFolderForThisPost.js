@@ -12,7 +12,6 @@ const alertUser = require('../../feedback/alertUser');
 async function validateFolderForThisPost(post) {
   try {
     if (!fs.existsSync(post)) {
-      alertUser('creation', 'postsFolder');
       fs.mkdirSync(post);
     }
   } catch (err) {

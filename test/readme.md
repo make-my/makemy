@@ -11,7 +11,7 @@ In this folder is everything needed to create a post page.
 
 ### How to run/test program:
 
-Run `node ../main.js` in the terminal.
+Run `node main.js`.
 
 ### Todo:
 

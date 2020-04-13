@@ -15,7 +15,7 @@ async function createConfigForPost(post, postCoreInfo) {
     const coreInfo = configureWriteStream(path.join(post, '.post.config'));
 
     for (const info in postCoreInfo) {
-      coreInfo.write(`${info} || ${postCoreInfo[info]}\n`);
+      coreInfo.write(`${info}||${postCoreInfo[info]}\n`);
     }
   } catch (err) {
     throw new Error(err);

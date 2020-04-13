@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 
 const alertUser = require('../feedback/alertUser');
-const terminal = require('../feedback/terminal');
 
 const configureWriteStream = require('../utils/readwrite/configureWriteStream');
 
@@ -15,6 +14,7 @@ const configureWriteStream = require('../utils/readwrite/configureWriteStream');
  * @param {Path} directory - The pathname for the posts folder.
  * @param {Oject} info - An object containing the core-info about the post we want to add to our JSON file.
  * @param {Boolean} update - Telling if we are in update mode or not
+ * @param {String} option - Voluntary argument, used in jsonFromConfigs.
  */
 
 async function addToJson(directory, info, update) {
@@ -32,53 +32,9 @@ async function addToJson(directory, info, update) {
   try {
     const allPostJsonFile = path.join(directory, 'allPosts.json');
 
-    const createJSONTemplate = () => {
-      configureWriteStream(allPostJsonFile).write(
-        `{
-  "posts": []
-  }`
-      );
-    };
-
-    if (!fs.existsSync(allPostJsonFile)) {
-      try {
-        createJSONTemplate();
-        alertUser('creation', 'jsonFile');
-      } catch (error) {
-        terminal(error);
-      }
-    }
-
     let json = await fs.promises.readFile(allPostJsonFile);
 
-    let allPosts;
-
-    try {
-      allPosts = JSON.parse(json);
-    } catch (error) {
-      /**
-       * If parsing went wrong then check the error-message.
-       * If it includes the word 'position', then theres something wrong with the formatting.
-       * If it doesn't, then it's because the JSON file is empty, and we create a new template.
-       */
-      const errorMessage = err.message;
-
-      if (errorMessage.includes('position')) {
-        alertUser('json', 'wrongFormat', {
-          errorMessage
-        });
-        alertUser('generic', 'stop');
-        throw Error(errorMessage);
-      } else {
-        createJSONTemplate();
-
-        json = await fs.promises.readFile(allPostJsonFile);
-
-        allPosts = JSON.parse(json);
-
-        alertUser('json', 'empty');
-      }
-    }
+    let allPosts = JSON.parse(json);
 
     const alreadyExists = allPosts.posts.find(post => post.url === info.url);
 
@@ -97,7 +53,6 @@ async function addToJson(directory, info, update) {
     }
 
     /**
-     * Some pretty specific error-feedback here.
      * If a post has the same name and introduction (maybe the user copied it),
      * then tell them that a post with the same name and introduction already exists but with a different url.
      *
@@ -140,8 +95,8 @@ async function addToJson(directory, info, update) {
 
     /**
      * Sorting posts by creation date
-     * Allow some configurations here?
      */
+
     allPosts.posts.sort((a, b) =>
       a.creationDateMS > b.creationDateMS ? -1 : 1
     );
