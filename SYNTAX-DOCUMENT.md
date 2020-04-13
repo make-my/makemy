@@ -1,11 +1,5 @@
 # Document explaining the syntax used for writing posts 📝
 
-#### Note: I am not claiming that this syntax is the easiest/best way to create a syntax that combines HTML and 'normal' writing. If you have any ideas, feedback or criticism, then please create an issue and write your thoughts.
-
-This is currently being worked on. Some ideas/todos(?) that are currently on paper:
-
-- Let user choose if `<a> tags should have a 'blank' (or maybe newtab) attribute` instead of automatically set target="\_blank" to all link tags created.
-- Make it so that the content of headers shouldn't have to be on the line beneath the trigger? If so, maybe copy the way markdown creates titles (if allowed?)
 
 ### Browse document
 
@@ -26,6 +20,26 @@ This is currently being worked on. Some ideas/todos(?) that are currently on pap
 # The main idea
 
 The idea behind makemys syntax is to combine the best parts of HTML, Markdown and normal document writage. To create components/section, you simply use the trigger '#' and the name of the component. Everything written beneath the trigger will be added to the section until a new trigger is used.
+
+
+### Currently available triggers:
+
+- Title
+- Text
+- Code
+- Quote
+
+### Syntax that doesn't require symbols:
+
+- Extra space between lines in text (breakpoint).
+
+### HTML tags that are customized by the tool:
+
+- `<a>`
+- `<code>`
+- `<blockquote>`
+
+&nbsp;
 
 ### The way the tool reads the syntax can be explained with this little 'dramatization/act'. The tool tells how it thinks when it reads every line of the post document provided by the user 👨‍💻
 
@@ -69,22 +83,6 @@ Now that i've managed to dodge the useless empty lines, i'll keep parsing the te
 
 After this i see that there's no more text in the document. I'll go out of my last mode, QUOTE-MODE, and add the content from this section to the HTML-code aswell. Now i'll send the fully created HTML code of this post to where the user added the `<POST>` tag in the template file. My here job is done. 🥳"
 
-### Currently available triggers:
-
-- Title
-- Text
-- Code
-- Quote
-
-### Syntax that doesn't require symbols:
-
-- Extra space between lines in text (breakpoint).
-
-### HTML tags that are customized by the tool:
-
-- `<a>`
-- `<code>`
-- `<blockquote>`
 
 &nbsp;
 
