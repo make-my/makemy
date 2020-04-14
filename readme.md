@@ -36,7 +36,7 @@ By passing in a html template and a text document with a syntax that makemy unde
 
 &nbsp;
 
-## 2️⃣ Create your post and template in the project
+## 2️⃣ Create your post and template in the project [TEMPLATE EXAMPLE](/test/template.html)
 
 ```
 --root
