@@ -1,4 +1,4 @@
-# Document explaining the syntax used for writing posts 📝
+# Document explaining the mymake syntax used for writing posts 📝
 
 
 ### Browse document
