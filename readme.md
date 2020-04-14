@@ -11,7 +11,7 @@ makemy simplifies the process of writing, creating and publishing posts/document
 - **Supports Markdown**
 - **Super easy setup**
 - **Helpful feedback in terminal**
-- **Automatically generated JSON for fetching previews of your posts on the client**
+- **Automatically generated JSON for fetching previews of your posts on the client** [(test example)](/test/client.js)
 - **Ability to update content of already generated pages**
 - **Ability to update templates for already generated pages**
 - **Ability to update/alter JSON file**
