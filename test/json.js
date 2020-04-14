@@ -1,4 +1,4 @@
-const makemy = require('../source/makemy');
+const makemy = require('../makemy');
 
 const jsonOptions = {
   order: 'ascending'

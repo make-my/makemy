@@ -1,11 +1,11 @@
-const makemy = require('../source/makemy');
+const makemy = require('../makemy');
 
 const options = {
   template: 'template',
 
   sourcefolder: 'posts-src',
 
-  postname: 'first-post',
+  postname: 'pure-markdown',
 
   // location: ''
 

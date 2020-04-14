@@ -1,5 +1,5 @@
 <p align="center">
-<img src="/media/makemy.png" alt="makemy">
+<img src="/media/makemy.png" alt="MAKEMY">
 </p>
 
 makemy simplifies the process of writing, creating and publishing posts/documents on static websites without the need of a back-end server.
@@ -20,7 +20,7 @@ makemy simplifies the process of writing, creating and publishing posts/document
 
 ### Extra feature created by makemy :heart:
 
-- Sugar-language for people that don't want to use markdown (Easy syntax, HTML and normal text-writing)
+- **Sugar-language for people that don't want to use markdown (Easy syntax, HTML and normal text-writing)**
 
 #### Extra reading material: [SYNTAX DOCUMENT (SUGAR-PARSER)](/SYNTAX-DOCUMENT.md)
 

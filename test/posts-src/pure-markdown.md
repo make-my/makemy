@@ -1,5 +1,5 @@
---name This post was written in markdowwn
---introduction You know how this post was created automatically? Purely in NodeJS
+--name My pure markdown post
+--introduction This was written entirely in markdown
 
 # Marked - Markdown Parser
 
