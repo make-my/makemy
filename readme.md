@@ -6,21 +6,25 @@ makemy simplifies the process of writing, creating and publishing posts/document
 
 By passing in a html template and a text document with a syntax that makemy understands, will it automatically create an index.html file. The way the template works, is that you can create a normal html site and just insert a `<POST>` tag where you want the post to be inserted. The file will be put into a parent folder with the name of the post, which will again be inserted into a generic "posts"-folder. This structure design is created to fit GitHub pages.
 
-### Extra reading material: [SYNTAX-DOCUMENT.md](/SYNTAX-DOCUMENT.md)
+## Features / Why choose makemy ⭐
 
-## Features
+- **Simple and logic API**
+- **Efficient**
+- **Supports Markdown**
+- **Super easy setup**
+- **Helpful feedback in terminal**
+- **Automatically generated JSON for fetching previews of your posts on the client**
+- **Ability to update content of already generated pages**
+- **Ability to update templates for already generated pages**
+- **Ability to update/alter JSON file**
+- **Pre-styled and responsive with CSS, but easily allows for own styling**
+- **Works perfectly with GitHub pages**
 
-- Simple and logic API
-- Efficient tool
-- Helpful command-feedback
-- Automatically generated JSON for fetching previews of your posts on the client
-- Ability to update content of already generated pages
-- Ability to update templates for already generated pages
-- Ability to update/alter JSON file
-- Pre-styled and responsive with CSS, but easily allows for own styling
-- Works perfectly with GitHub pages
-- Straightforward to write posts (combination of Markup, HTML and normal text-writing)
-### No need to "re-learn" any syntax!
+### Extra feature created by makemy :heart:
+
+- Sugar-language for people that don't want to use markdown (Easy syntax, HTML and normal text-writing)
+
+#### Extra reading material: [SYNTAX DOCUMENT (SUGAR-PARSER)](/SYNTAX-DOCUMENT.md)
 
 &nbsp;
 
@@ -40,10 +44,10 @@ By passing in a html template and a text document with a syntax that makemy unde
    |
    |---- folder-with-posts
    |            |
-   |            |--- my-first-post.txt
+   |            |--- post_about_waffles.md
    |
    |
-   |---- template.html
+   |---- mytemplate.html
 
 ```
 
@@ -57,7 +61,7 @@ const makemy = require('makemy');
 // Set up options
 const options = {
   template: 'mytemplate',
-  sourcefolder: 'posts-source',
+  sourcefolder: 'folder-with-posts',
   postname: 'post_about_waffles'
 };
 
@@ -101,13 +105,17 @@ Now your root folder will have a folder named "posts" where the posts will be in
 
 &nbsp;
 
+#### The url to your post would look like this: `https://mycoolsite.github.io/posts/post_about_waffles`
+
+&nbsp;
+
 &nbsp;
 
 # API
 
-### makemy.page(path-to-directory, [options])
+## makemy.page(path-to-directory, [options])
 
-`options`:
+### `options`:
 
 #### REQUIRED OPTIONS:
 
@@ -119,7 +127,8 @@ Now your root folder will have a folder named "posts" where the posts will be in
 
 - location: path (relative to `__dirname`) to where the "posts"-folder should be created.
 - extension: type of extension used on the written document.
-- update: choosing if a post should be updated (generated again), is false by default
+- update: choosing if a post should be updated (if you want to re-generate the same post), is false by default
+- sugar: set to true if you want to use the sugar-parser created by makemy [SYNTAX DOCUMENT (SUGAR-PARSER)](/SYNTAX-DOCUMENT.md)
 
 #### Example:
 
@@ -137,9 +146,11 @@ makemy.page(__dirname, options);
 
 &nbsp;
 
-### makemy.json(path-to-directory, [options])
+## makemy.json(path-to-directory, [options])
 
-`options`:
+### NOTE: ONLY USE IF YOU WANT TO UPDATE/REGENERATE THE JSON FILE. NO NEED TO RUN THIS FUNCTION WHEN YOU CREATE A PAGE AS THE makemy.page FUNCTION DOES THIS BY ITSELF.
+
+### `options`:
 
 #### VOLUNTARY OPTIONS:
 
@@ -157,9 +168,11 @@ makemy.json(__dirname, options);
 
 &nbsp;
 
-### makemy.templates(path-to-directory, [options])
+## makemy.templates(path-to-directory, [options])
 
-`options`:
+### NOTE: THIS IS USED FOR UPDATING TEMPLATES ON ALREADY GENERATED PAGES
+
+### `options`:
 
 #### REQUIRED OPTIONS:
 

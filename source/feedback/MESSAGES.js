@@ -1,7 +1,19 @@
 'use strict';
 
 /**
- * All the message used for giving feedback to a user
+ * Here are all the message used for giving feedback to a user stored.
+ * The MESSAGES object works basically like a storage for the different messages.
+ * Combined with the 'alertUser'-functions becomes the process of easily alerting the
+ * users with custom messages pretty simple.
+ *
+ * If the message is dynamic (telling that a specific post is already created), then the
+ * message must be wrapped in a function with a parameter (i use variable). Then when a
+ * dynamic message should be sent, i just have to add an object at the end of alertUser()
+ * with the different variables.
+ *
+ * The functions can also return arrays of messages, in case i want multiple messages to be
+ * delivered as feedback.
+ *
  */
 
 const { error, warning, info, success, underline } = require('./CHALKS');
@@ -49,7 +61,7 @@ const MESSAGES = {
     },
     page: variable => {
       return [
-        error(`ERROR: The page for ${variable.postname} already exists.'⛔`),
+        error(`ERROR: The page for ${variable.postname} already exists! ⛔`),
         warning(
           'If you wanted to update the post page, then the set the update option to true.'
         )
@@ -62,10 +74,10 @@ const MESSAGES = {
   // Messages about core info of a post
   coreInfo: {
     name: error(
-      'ERROR: You must provide a name for the post at the beginning. Use --name: to do this.'
+      'ERROR: You must provide a name for the post. Do this at the first line of the document. Use --name to do this.'
     ),
     introduction: error(
-      'ERROR: You must provide an introduction for the post at the beginning. Use --introduction: to do this.'
+      'ERROR: You must provide a introduction for the post. Do this at the second line of the document. Use --introduction to do this.'
     )
   },
   // Messages about the creation of folders/files

@@ -48,8 +48,10 @@ async function getBirthtime(postFileLocation) {
     day = days.find(d => d.startsWith(day));
     month = months.find(d => d.startsWith(month));
 
+    // If date starts with a 0, then only show the second integer. (04 becomes 4)
     date = date.startsWith(0) ? date[1] : date;
 
+    // Add correct suffix for date
     if (date.endsWith(1)) {
       suffix = 'st';
     } else if (date.endsWith(2)) {
@@ -60,7 +62,7 @@ async function getBirthtime(postFileLocation) {
 
     return [`${day} ${date + suffix} of ${month} ${year}`, stat.birthtimeMs];
   } catch (err) {
-    throw new Error(err);
+    throw Error(err);
   }
 }
 

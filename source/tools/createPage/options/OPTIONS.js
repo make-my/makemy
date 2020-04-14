@@ -6,7 +6,8 @@ const allOptions = [
   'postname',
   'location',
   'extension',
-  'update'
+  'update',
+  'sugar'
 ];
 
 const requiredOptions = ['template', 'sourcefolder', 'postname'];

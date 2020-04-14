@@ -5,11 +5,13 @@ const options = {
 
   sourcefolder: 'posts-src',
 
-  postname: 'i-like-waffles',
+  postname: 'first-post',
 
   // location: ''
 
   // extension: 'txt',
+
+  // sugar: true,
 
   update: true
 };

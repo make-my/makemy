@@ -5,4 +5,4 @@ const templateOptions = {
   posts: 'all' // 'all' or array with postnames ['first-post', 'i-like-waffles']
 };
 
-makemy.templates(__dirname, templateOptions);
+makemy.template(__dirname, templateOptions);

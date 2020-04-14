@@ -13,7 +13,7 @@
 const makemy = {
   page: require('./tools/createPage/createPage'),
   json: require('./tools/updateJson/updateJson'),
-  templates: require('./tools/updateTemplates/updateTemplates')
+  template: require('./tools/updateTemplates/updateTemplates')
 };
 
 module.exports = makemy;

@@ -5,6 +5,9 @@ const MESSAGES = require('./MESSAGES');
 const terminal = require('./terminal');
 
 /**
+ * alertUser allows for a very simple and straightforward way to choose what messages
+ * to send as feedback in the tool. It works with the MESSAGES object, and dynamically
+ * displays the messages in the terminal based on the MESSAGE-type.
  *
  * @param {String} category - The name of the category that the message should be extracted from the messages object above.
  * @param {String} type - The type of message to choose within the category

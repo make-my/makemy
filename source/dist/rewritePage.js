@@ -17,16 +17,18 @@ const configureWriteStream = require('../utils/readwrite/configureWriteStream');
 async function rewritePage(pathToIndex, template) {
   /**
    * Note: The template provided only contains the content from beneath the header tag.
+   *
    * The approach here is to take everything beneath the header (maybe make this configurable)
    * in the index.html file and replace all content (except for the post) with the new template content.
    *
-   * 1. Turn current index.html into one single string
-   * 2. Find the endOffset of the <head> tag and store all content above in HEAD.
+   * 1. Turn current index.html into a single string.
+   * 2. Find the endOffset of the <head> tag and store all content above in the constant HEAD.
    * 3. Find the start and end offset of the post-section, remove it from the HTML-string
-   *    and store it into POST.
+   *    and store it into the constant POST.
    * 4. Replace the <POST> tag in the template with the post-section extracted from the old index.html file.
    * 5. Add together the head of the old index.html file and the body of the new template.
    * 6. Overwrite the index.html file with the new content.
+   * 7. Done!
    */
 
   try {

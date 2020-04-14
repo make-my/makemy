@@ -50,7 +50,8 @@ const addToJson = require('../../dist/addToJson');
 const writeTitleTag = require('../../utils/readwrite/HTML-WRITERS/writeTitleTag');
 const writeCSS_Tags = require('../../utils/readwrite/HTML-WRITERS/writeCSS_Tags');
 const insertToHeadTag = require('../../utils/readwrite/HTML-WRITERS/insertToHeadTag');
-const createPost = require('../createPost/createPost');
+const markdownParser = require('../markdownParser/markdownParser');
+const sugarParser = require('../sugarParser/sugarParser');
 
 /* Step five */
 const createConfigForPost = require('../../utils/configs/createConfigForPost');
@@ -85,7 +86,7 @@ async function createPage(directory, options) {
   /*const*/ postname = postname;
   /*const*/ location = location;
 
-  let { extension, update = false } = options;
+  let { extension, update = false, sugar = false } = options;
 
   let postFile;
   let pageExists = false;
@@ -207,8 +208,16 @@ async function createPage(directory, options) {
         );
 
         // Create post and insert into page.
-        const postHTML = await createPost(directory, sourcefolder, postFile);
+        let postHTML;
 
+        // If the user wrote their post in markdown, then we use the markdown parser
+        if (!sugar) {
+          postHTML = await markdownParser(directory, sourcefolder, postFile);
+        }
+        // Else if the user wants to use the sugar-languange created by makemy, then we parse it with the sugar parser
+        else if (sugar) {
+          postHTML = await sugarParser(directory, sourcefolder, postFile);
+        }
         writeStream.write(postHTML);
 
         writeStream.write('</section>');
