@@ -19,7 +19,7 @@
 
 # The main idea
 
-The idea behind makemys syntax is to combine the best parts of HTML, Markdown and normal document writage. To create components/section, you simply use the trigger '#' and the name of the component. Everything written beneath the trigger will be added to the section until a new trigger is used.
+The idea behind makemys syntax is to combine the easy parts of HTML and normal text writing. To create components/section, you simply use the trigger '#' and the name of the component. Everything written beneath the trigger will be added to the section until a new trigger is used.
 
 
 ### Currently available triggers:
@@ -125,7 +125,7 @@ Creates a normal text-section where everything will be created as written in the
 # Text
 
 Here is my first line in this section.
-And here's a link to a cool page <a link="https://github.com">.
+And here's a link to a cool page <a href="https://github.com">.
 
 Because there were an empty space between this line and the one above, will an automatic breakpoint be set between these two paragraphs.
 And finally here's a list:
