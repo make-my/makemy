@@ -2,7 +2,9 @@
 <img src="/media/makemy.png" alt="MAKEMY">
 </p>
 
-## makemy is a tool that parses your text-posts and creates beautiful webpages out of them :heart: 📄
+#### makemy is a tool that parses your text-posts and creates beautiful webpages out of them :heart: 📄
+[![Build Status](https://travis-ci.com/make-my/makemy.svg?branch=master)](https://travis-ci.com/make-my/makemy) [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+
 
 &nbsp;
 
