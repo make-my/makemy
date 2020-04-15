@@ -32,23 +32,19 @@
 
 # How to use:
 
-## 1️. Install
-
-### `npm install makemy`
+## 1️. Install with `npm install makemy`
 
 ![](media/npm-install.gif)
 
 &nbsp;
 
-## 2️. Run makemy-init to get a pre-made "generator" folder in your project
-
-### `makemy-init`
+## 2️. Run `makemy-init` to get a pre-made "generator" folder in your project
 
 ![](media/makemy-init.gif)
 
 &nbsp;
 
-## 3. Create your post and template in the project [TEMPLATE EXAMPLE](/test/template.html)
+## 3. Create your post and template in the project - and run makemy.page()
 
 ![](media/createpage.gif)
 
@@ -166,7 +162,7 @@ makemy.json(__dirname, options);
 | Name         | Type     | Description                   |
 | ------------ | -------- | ----------------------------- |
 | **template** | _String_ | name of the new HTML template |
-| **posts**    | \*String | Array\*                       | the posts that should have their tempalte updated. Can either be an array with names or just the string 'all'. |
+| **posts**    |_String_ or _Array_ | select which posts should have their template updated. Can either be an array with names or just the string 'all'|
 
 &nbsp;
 
@@ -182,11 +178,3 @@ makemy.template(__dirname, options);
 ```
 
 &nbsp;
-
-&nbsp;
-
-#### If you have any questions or just want to chat, then send me an 📧 at mathiaswpicker@gmail.com
-
-Have a nice day!
-
--- Mathias
