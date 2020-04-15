@@ -4,6 +4,8 @@
 
 ## makemy is a tool that generates HTML-pages out of text posts 📄
 
+&nbsp;
+
 ## Features / Why choose makemy ⭐
 
 - **Works perfectly for static blog-pages!**
@@ -38,7 +40,7 @@
 
 &nbsp;
 
-## 2️. Run makemy-init to get a pre-made example folder in your project
+## 2️. Run makemy-init to get a pre-made "generator" folder in your project
 
 ### `makemy-init`
 
