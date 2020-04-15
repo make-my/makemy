@@ -2,7 +2,7 @@
 <img src="/media/makemy.png" alt="MAKEMY">
 </p>
 
-## makemy is a tool that generates HTML-pages out of your text posts 📄
+## makemy is a tool that parses your text-posts and creates beautiful webpages out of them :heart: 📄
 
 &nbsp;
 
