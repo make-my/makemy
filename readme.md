@@ -32,23 +32,19 @@
 
 # How to use:
 
-## 1️. Install
-
-### `npm install makemy`
+## 1️. Install with `npm install makemy`
 
 ![](media/npm-install.gif)
 
 &nbsp;
 
-## 2️. Run makemy-init to get a pre-made "generator" folder in your project
-
-### `makemy-init`
+## 2️. Run `makemy-init` to get a pre-made "generator" folder in your project
 
 ![](media/makemy-init.gif)
 
 &nbsp;
 
-## 3. Create your post and template in the project [TEMPLATE EXAMPLE](/test/template.html)
+## 3. Create your post and template in the project - and run makemy.page()
 
 ![](media/createpage.gif)
 
@@ -72,11 +68,11 @@
 
 # API
 
-### - **makemy.page()**
+#### - **``makemy.page(dir, options:object)``**
 
-### - **makemy.json()**
+#### - **``makemy.json(dir, options:object)``**
 
-### - **makemy.templates()**
+#### - **``makemy.templates(dir, options:object)``**
 
 &nbsp;
 
@@ -100,6 +96,8 @@
 | **extension** | _String_  | type of extension used on the document.                                                                                 |
 | **update**    | _Boolean_ | choose if a post should be updated (if you want to re-generate the same post), is false by default                      |
 | **sugar**     | _Boolean_ | set to true if you want to use the sugar-parser created by makemy [SYNTAX DOCUMENT (SUGAR-PARSER)](/SYNTAX-DOCUMENT.md) |
+
+&nbsp;
 
 #### Example of using makemy.page to update an already existing page:
 
@@ -139,6 +137,8 @@ makemy.page(__dirname, options);
 | --------- | -------- | ------------------------------------------------------------------------------------------------ |
 | **order** | _String_ | what order the posts in the json file should be. Options are ascending (default) and descending. |
 
+&nbsp;
+
 #### Example:
 
 ```js
@@ -162,7 +162,9 @@ makemy.json(__dirname, options);
 | Name         | Type     | Description                   |
 | ------------ | -------- | ----------------------------- |
 | **template** | _String_ | name of the new HTML template |
-| **posts**    | \*String | Array\*                       | the posts that should have their tempalte updated. Can either be an array with names or just the string 'all'. |
+| **posts**    |_String_ or _Array_ | select which posts should have their template updated. Can either be an array with names or just the string 'all'|
+
+&nbsp;
 
 #### Example:
 
@@ -176,11 +178,3 @@ makemy.template(__dirname, options);
 ```
 
 &nbsp;
-
-&nbsp;
-
-#### If you have any questions or just want to chat, then send me an 📧 at mathiaswpicker@gmail.com
-
-Have a nice day!
-
--- Mathias
