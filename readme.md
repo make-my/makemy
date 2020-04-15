@@ -28,13 +28,13 @@ makemy simplifies the process of writing, creating and publishing posts/document
 
 # How to use:
 
-## 1️⃣ Install
+## 1️. Install
 
 ### `npm install makemy`
 
 &nbsp;
 
-## 2️⃣ Create your post and template in the project [TEMPLATE EXAMPLE](/test/template.html)
+## 2️. Create your post and template in the project [TEMPLATE EXAMPLE](/test/template.html)
 
 ```
 --root
@@ -51,7 +51,7 @@ makemy simplifies the process of writing, creating and publishing posts/document
 
 &nbsp;
 
-## 3️⃣ Import the tool and run makemy
+## 3. Import the tool and run makemy
 
 ```js
 const makemy = require('makemy');

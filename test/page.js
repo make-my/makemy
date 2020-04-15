@@ -1,4 +1,4 @@
-const makemy = require('../makemy');
+const makemy = require('../lib/makemy');
 
 const options = {
   template: 'template',
