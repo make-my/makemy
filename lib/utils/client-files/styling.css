@@ -22,8 +22,6 @@
 .post-section > * {
   width: 60%;
   margin: 4rem auto 0;
-  color: inherit;
-  background-color: inherit;
   line-height: 1.2;
   box-sizing: border-box;
   position: relative;
@@ -115,11 +113,14 @@
 
 /* HTML ITEMS */
 
+pre,
 .code-tag,
 .code-tag-flow {
   background-color: #282c34;
   color: white;
 }
+
+pre,
 .code-tag {
   display: block;
   padding: 1.5rem;
