@@ -2,15 +2,15 @@
 <img src="/media/makemy.png" alt="MAKEMY">
 </p>
 
-## makemy is a tool that generates HTML-pages out of text posts 📄
+## makemy is a tool that generates HTML-pages out of your text posts 📄
 
 &nbsp;
 
 ## Features / Why choose makemy ⭐
 
-- **Works perfectly for static blog-pages!**
+- **Works like a charm for static blog-pages!**
 - **Simple and logic API**
-- **Efficient**
+- **Efficient and uses few dependencies**
 - **Supports Markdown**
 - **Use your own template super easily**
 - **Automatic folder-structuring**
@@ -20,7 +20,7 @@
 - **Ability to update templates for already generated pages**
 - **Ability to update/alter JSON file**
 - **Pre-styled and responsive with CSS, but easily allows for own styling**
-- **Works perfectly with GitHub pages**
+- **Follows the GitHub pages structure**
 
 ### Extra feature created by makemy :heart:
 
@@ -71,6 +71,14 @@
 &nbsp;
 
 # API
+
+### - **makemy.page()**
+
+### - **makemy.json()**
+
+### - **makemy.templates()**
+
+&nbsp;
 
 ## makemy.page(path-to-directory, [options])
 
