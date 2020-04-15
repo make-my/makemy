@@ -7,12 +7,12 @@
 ## Features / Why choose makemy ⭐
 
 - **Works perfectly for static blog-pages!**
-- **Simple and logic API** 🌻
-- **Efficient** 🚄
-- **Supports Markdown** 📝
-- **Use your own template super easily** 📋
-- **Automatic folder-structuring** 🗂
-- **Helpful feedback in terminal** 📢
+- **Simple and logic API**
+- **Efficient**
+- **Supports Markdown**
+- **Use your own template super easily**
+- **Automatic folder-structuring**
+- **Helpful feedback in terminal**
 - **Automatically generated JSON for fetching previews of your posts on the client** [(test example)](/test/client.js)
 - **Ability to update content of already generated pages**
 - **Ability to update templates for already generated pages**
@@ -36,7 +36,6 @@
 
 ![](media/npm-install.gif)
 
-
 &nbsp;
 
 ## 2️. Run makemy-init to get a pre-made example folder in your project
@@ -47,17 +46,15 @@
 
 &nbsp;
 
-
 ## 3. Create your post and template in the project [TEMPLATE EXAMPLE](/test/template.html)
 
 ![](media/createpage.gif)
 
 &nbsp;
 
-
 ## Done! ✅
 
-### Now you can create as many posts as you wish! Just run the makemy function to create their HTML-pages. 
+### Now you can create as many posts as you wish! Just run the makemy function to create their HTML-pages.
 
 #### Example of two generated pages, one with markdown and one with the makemy sugar-syntax:
 
@@ -79,22 +76,20 @@
 
 #### REQUIRED OPTIONS:
 
-| Name | Type | Description |
-| --- | --- | --- |
-| **template** | *String*  | name of the HTML file used as the template for the page. Do not write the .html suffix |
-| **sourcefoulder** | *String* | name of folder where the written post is. |
-| **postname** | *String* | name of post. |
-
-
+| Name              | Type     | Description                                                                            |
+| ----------------- | -------- | -------------------------------------------------------------------------------------- |
+| **template**      | _String_ | name of the HTML file used as the template for the page. Do not write the .html suffix |
+| **sourcefoulder** | _String_ | name of folder where the written post is.                                              |
+| **postname**      | _String_ | name of post.                                                                          |
 
 #### VOLUNTARY OPTIONS:
 
-| Name | Type | Description |
-| --- | --- | --- |
-| **location** | *String*  | path (relative to `__dirname`) to where the "posts"-folder should be created.|
-| **extension** | *String* | type of extension used on the document. |
-| **update** | *Boolean* | choose if a post should be updated (if you want to re-generate the same post), is false by default |
-| **sugar** | *Boolean* | set to true if you want to use the sugar-parser created by makemy [SYNTAX DOCUMENT (SUGAR-PARSER)](/SYNTAX-DOCUMENT.md) |
+| Name          | Type      | Description                                                                                                             |
+| ------------- | --------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **location**  | _String_  | path (relative to `__dirname`) to where the "posts"-folder should be created.                                           |
+| **extension** | _String_  | type of extension used on the document.                                                                                 |
+| **update**    | _Boolean_ | choose if a post should be updated (if you want to re-generate the same post), is false by default                      |
+| **sugar**     | _Boolean_ | set to true if you want to use the sugar-parser created by makemy [SYNTAX DOCUMENT (SUGAR-PARSER)](/SYNTAX-DOCUMENT.md) |
 
 #### Example of using makemy.page to update an already existing page:
 
@@ -130,10 +125,9 @@ makemy.page(__dirname, options);
 
 #### VOLUNTARY OPTIONS:
 
-| Name | Type | Description |
-| --- | --- | --- |
-| **order** | *String*  | what order the posts in the json file should be. Options are ascending (default) and descending.|
-
+| Name      | Type     | Description                                                                                      |
+| --------- | -------- | ------------------------------------------------------------------------------------------------ |
+| **order** | _String_ | what order the posts in the json file should be. Options are ascending (default) and descending. |
 
 #### Example:
 
@@ -155,10 +149,10 @@ makemy.json(__dirname, options);
 
 #### REQUIRED OPTIONS:
 
-| Name | Type | Description |
-| --- | --- | --- |
-| **template** | *String*  | name of the new HTML template |
-| **posts** | *String|Array* | the posts that should have their tempalte updated. Can either be an array with names or just the string 'all'. |
+| Name         | Type     | Description                   |
+| ------------ | -------- | ----------------------------- |
+| **template** | _String_ | name of the new HTML template |
+| **posts**    | \*String | Array\*                       | the posts that should have their tempalte updated. Can either be an array with names or just the string 'all'. |
 
 #### Example:
 
