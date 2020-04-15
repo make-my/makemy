@@ -31,5 +31,8 @@
   "bugs": {
     "url": "https://github.com/make-my/makemy/issues"
   },
-  "homepage": "https://github.com/make-my/makemy#readme"
+  "homepage": "https://github.com/make-my/makemy#readme",
+  "devDependencies": {
+    "coveralls": "^3.0.11"
+  }
 }
