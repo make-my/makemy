@@ -31,3 +31,32 @@
 ## Read the [documentation](https://github.com/make-my/DOCS)
 
 #### Extra reading material: [Syntax Document (SUGAR-PARSER)](https://github.com/make-my/DOCS/blob/master/SYNTAX-DOCUMENT.md)
+
+
+# How to use:
+
+## 1️. Install
+
+### `npm install makemy`
+
+&nbsp;
+
+## 2️. Run makemy-init to get a pre-made "generator" folder in your project
+
+### `makemy-init`
+
+&nbsp;
+
+## 3. Create your post and template in the project-folder and run makemy.page() [video example](https://github.com/make-my/DOCS#3-create-your-post-and-template-in-the-project---and-run-makemypage)
+
+&nbsp;
+
+## Done! ✅
+Now you can create as many posts as you wish! Just run the makemy function to create their HTML-pages.
+Example of two generated pages, one with markdown and one with the makemy sugar-syntax:
+
+The url of a post would be structured like this: https://mycoolsite.github.io/posts/post_about_waffles
+
+&nbsp;
+
+# Read the full [documentation](https://github.com/make-my/DOCS)
