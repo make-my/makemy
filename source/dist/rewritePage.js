@@ -1,7 +1,6 @@
 'use strict';
 
-const jsdom = require('jsdom');
-const { JSDOM } = jsdom;
+const parse5 = require('parse5');
 
 const terminal = require('../feedback/terminal');
 
@@ -36,24 +35,62 @@ async function rewritePage(pathToIndex, template) {
 
     let HTML = '';
 
+    // Turning the HTML of the current page into a single string
+
     for await (const line of rl) {
       HTML += line;
     }
 
-    const DOM = new JSDOM(HTML, { includeNodeLocations: true });
+    /**
+     * Can easily find the end-position of the head tag with vanilla JS, but getting the end
+     * position of the .post-section requires a library.
+     */
 
-    const HeadSection = DOM.window.document.querySelector('head');
-    const HeadEnd = DOM.nodeLocation(HeadSection).endOffset;
+    const HeadSection = HTML.indexOf('</head>');
+    const HeadEnd = HeadSection + '</head>'.length;
+
+    /**
+     * Thanks to the parse5 package has the process of transfering the post-section
+     * from the old page in to the new template become very efficient.
+     *
+     * The approach is to find the post-section with the parse5 API and then serialize
+     * it so that the tool get's the full html-string of the post in the current page.
+     * Then it's pretty straight-forward to just replace the <POST> in the template with
+     * a new <section class="post-section"> and insert the serialized HTML in this section.
+     */
 
     const HEAD = HTML.slice(0, HeadEnd);
 
-    const PostSection = DOM.window.document.querySelector('.post-section');
-    const SectionStart = DOM.nodeLocation(PostSection).startOffset;
-    const SectionEnd = DOM.nodeLocation(PostSection).endOffset;
+    const document = parse5.parse(HTML);
 
-    const POST = HTML.slice(SectionStart, SectionEnd);
+    const body = document.childNodes[1].childNodes.find(
+      child => child.nodeName === 'body'
+    );
 
-    const newBody = template.replace('<POST>', POST);
+    let postSection;
+
+    for (const child of body.childNodes) {
+      if (Array.isArray(child.attrs)) {
+        child.attrs.forEach(attribute => {
+          if (
+            attribute.name === 'class' &&
+            attribute.value === 'post-section'
+          ) {
+            postSection = child;
+          }
+        });
+      }
+      if (postSection !== undefined) {
+        break;
+      }
+    }
+
+    const POSTSECTION = parse5.serialize(postSection);
+
+    const newBody = template.replace(
+      '<POST>',
+      `<section class="post-section">${POSTSECTION}</section>`
+    );
 
     const newPage = HEAD + newBody;
 

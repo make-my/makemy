@@ -26,14 +26,21 @@ async function replaceHTML(directory, template, posts) {
     let pastHead = false;
 
     for await (let line of rl) {
+      if (pastHead) {
+        templateHTML += line;
+        continue;
+      }
       if (line.trim().startsWith('<body')) {
         pastHead = true;
       }
-
-      if (pastHead) {
-        templateHTML += line;
-      }
     }
+
+    /**
+     * Here we loop through the 'posts'-folder and find all the posts where we
+     * want to replace the template.
+     * @param {Directory|String} dir - the path to the directory we want to read
+     * @param {String} post - name of the post we want to find
+     */
 
     async function readDirectory(dir, post) {
       fs.readdir(dir, async function(err, items) {

@@ -1,5 +1,7 @@
 'use strict';
 
+const findVoluntaryOptions = require('../../../utils/getters/findVoluntaryOptions');
+
 const allOptions = [
   'template',
   'sourcefolder',
@@ -12,12 +14,6 @@ const allOptions = [
 
 const requiredOptions = ['template', 'sourcefolder', 'postname'];
 
-const voluntaryOptions = [];
-
-for (const option of allOptions) {
-  if (requiredOptions.indexOf(option) === -1) {
-    voluntaryOptions.push(option);
-  }
-}
+const voluntaryOptions = findVoluntaryOptions(allOptions, requiredOptions);
 
 module.exports = { allOptions, requiredOptions, voluntaryOptions };
