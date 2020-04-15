@@ -72,11 +72,11 @@
 
 # API
 
-### - **makemy.page()**
+#### - **``makemy.page(dir, options:object)``**
 
-### - **makemy.json()**
+#### - **``makemy.json(dir, options:object)``**
 
-### - **makemy.templates()**
+#### - **``makemy.templates(dir, options:object)``**
 
 &nbsp;
 
@@ -100,6 +100,8 @@
 | **extension** | _String_  | type of extension used on the document.                                                                                 |
 | **update**    | _Boolean_ | choose if a post should be updated (if you want to re-generate the same post), is false by default                      |
 | **sugar**     | _Boolean_ | set to true if you want to use the sugar-parser created by makemy [SYNTAX DOCUMENT (SUGAR-PARSER)](/SYNTAX-DOCUMENT.md) |
+
+&nbsp;
 
 #### Example of using makemy.page to update an already existing page:
 
@@ -139,6 +141,8 @@ makemy.page(__dirname, options);
 | --------- | -------- | ------------------------------------------------------------------------------------------------ |
 | **order** | _String_ | what order the posts in the json file should be. Options are ascending (default) and descending. |
 
+&nbsp;
+
 #### Example:
 
 ```js
@@ -163,6 +167,8 @@ makemy.json(__dirname, options);
 | ------------ | -------- | ----------------------------- |
 | **template** | _String_ | name of the new HTML template |
 | **posts**    | \*String | Array\*                       | the posts that should have their tempalte updated. Can either be an array with names or just the string 'all'. |
+
+&nbsp;
 
 #### Example:
 
