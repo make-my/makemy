@@ -3,7 +3,7 @@
 </p>
 
 #### makemy is a tool that parses your text-posts and creates beautiful webpages out of them :heart: 📄
-![npm bundle size](https://img.shields.io/bundlephobia/min/makemy) [![Build Status](https://travis-ci.com/make-my/makemy.svg?branch=master)](https://travis-ci.com/make-my/makemy) ![npm](https://img.shields.io/npm/v/makemy) [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[![Build Status](https://travis-ci.com/make-my/makemy.svg?branch=master)](https://travis-ci.com/make-my/makemy) ![npm unpacked size](https://img.shields.io/badge/unpacked%20size-97.6%20kB-orange) ![npm](https://img.shields.io/npm/v/makemy) [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 
 &nbsp;
